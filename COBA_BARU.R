@@ -1,0 +1,5 @@
+TEKS = "sELAMAT DATANG DI DUNIA R"
+TEKS2 = "anjay"
+
+print(TEKS)
+
