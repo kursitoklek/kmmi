@@ -1,5 +1,12 @@
-TEKS = "sELAMAT DATANG DI DUNIA R"
-TEKS2 = "anjay"
+install_paket <- function(pkg) {
+  new.pkg <- pkg[!(pkg %in%installed.packages() [, "Package"])]
+  
+  if (length(new.pkg))
+    install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+  }
 
-print(TEKS)
+paket <- c("tidyverse", "tidytext", "reshape2", "RColorBrewer", "scales", "haven", 
+           "topicmodels", "plotly", "DT", "knitr", "readxl", "missForest","htmltools")
 
+install_paket(paket)
